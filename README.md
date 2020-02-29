@@ -1,5 +1,7 @@
 # PokemonNg
 
+This is just a simple test project to play around with Angular and a Pokemon API: https://pokeapi.co/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
 ## Development server
