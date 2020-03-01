@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      pokemonName: new FormControl('', [Validators.required, Validators.min(3)])
+      pokemonName: new FormControl('', [Validators.required, Validators.minLength(3)])
     });
   }
 
