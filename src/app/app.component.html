@@ -1,2 +1,9 @@
 <div>Hello Pokemon!</div>
+<form [formGroup]="form">
+    <label for="pokemon-name">
+        Search for a Pokemon (enter their name)
+    </label>
+    <input formControlName="pokemonName" id="pokemon-name" name="pokemon-name" type="text">
+    <button (click)="getPokemonData()" [disabled]="form.invalid">Search</button>
+</form>
 <div *ngIf="pokemon">{{pokemon.name}}</div>
