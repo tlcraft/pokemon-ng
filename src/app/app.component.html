@@ -6,4 +6,4 @@
     <input formControlName="pokemonName" id="pokemon-name" name="pokemon-name" type="text">
     <button (click)="getPokemonData()" [disabled]="form.invalid">Search</button>
 </form>
-<div *ngIf="pokemon">{{pokemon.name}}</div>
+<pre *ngIf="pokemon">{{pokemon | json}}</pre>
