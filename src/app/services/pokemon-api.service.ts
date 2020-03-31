@@ -12,7 +12,7 @@ export class PokemonApiService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemon(name: string): Observable<any> {
+  getPokemon(name: string): Observable<Pokemon> {
     const pokemon = this.http.get<Pokemon>(environment.apiUrl + name);
     return pokemon;
   }
