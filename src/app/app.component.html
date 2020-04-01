@@ -6,5 +6,4 @@
     <input formControlName="pokemonName" id="pokemon-name" name="pokemon-name" type="text">
     <button (click)="getPokemonData()" [disabled]="form.invalid">Search</button>
 </form>
-<img *ngIf="pokemonSource()" src="{{pokemonSource()}}" alt="A picture of a pokemon {{getLowerCasePokemonName()}}." />
-<pre *ngIf="pokemon">{{pokemon | json}}</pre>
+<img *ngIf="pokemonSource()" src="{{pokemonSource()}}" alt="A picture of a pokemon {{getLowerCasePokemonName()}}." class="sprite"/>
