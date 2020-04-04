@@ -3,21 +3,27 @@
     flex-direction: column;
     padding-top: 200px;
     text-align: center;
-    margin: auto;
-    margin-top: 5%;
-    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
 }
 
 form {
-    border: solid 4px black;
+    border: solid 4px #222224;
     border-radius: 50%;
-    background: linear-gradient(180deg, red 50%, white 50%);
+    background: linear-gradient(180deg, #ee1515 50%, #f0f0f0 50%);
     height: 450px;
+    width: 650px;
     font-size: 2em;
     top: 10px;
-
+    
     .title {
-        margin: 10px 10px;;
+        margin: 10px 10px;
+        font-weight: 600;
+    }
+
+    label {
+        font-weight: 600;
     }
 
     input {
@@ -31,12 +37,39 @@ form {
         border-radius: 50%;
         width: 100px;
         height: 100px;
-        border: solid 4px black;
+        border: solid 4px #222224;
         margin-left: auto;
         margin-right: auto;
+        background-color: #f0f0f0;
+        z-index: 1;
+
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: solid 2px #222224;
+            height: 71px;
+        }
+    }
+
+    button:hover {
+        background-color: grey;
+
+        .circle {
+            color: #f0f0f0;
+        }
     }
 }
 
 pre {    
     font-size: 2em;
+}
+
+.sprite {
+    width: 15%;
+    height: 15%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PokemonApiService } from './services/pokemon-api.service';
+import { Pokemon } from './models/pokemon.model';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { PokemonApiService } from './services/pokemon-api.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  pokemon: any;
+  pokemon: Pokemon;
   form: FormGroup;
 
   constructor(private pokemonApiService: PokemonApiService) {}
@@ -29,8 +30,13 @@ export class AppComponent implements OnInit {
     }
   }
 
-  private getLowerCasePokemonName(): string {
+  getLowerCasePokemonName(): string {
     const nameControl = this.form && this.form.get('pokemonName');
     return nameControl && nameControl.value && nameControl.value.toLowerCase();
+  }
+
+  pokemonSource(): string {
+    const source = this.pokemon && this.pokemon.sprites && this.pokemon.sprites.front_default;
+    return source;
   }
 }
