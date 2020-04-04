@@ -18,7 +18,12 @@ form {
     top: 10px;
     
     .title {
-        margin: 10px 10px;;
+        margin: 10px 10px;
+        font-weight: 600;
+    }
+
+    label {
+        font-weight: 600;
     }
 
     input {
@@ -45,6 +50,14 @@ form {
             border-radius: 50%;
             border: solid 2px #222224;
             height: 71px;
+        }
+    }
+
+    button:hover {
+        background-color: grey;
+
+        .circle {
+            color: #f0f0f0;
         }
     }
 }
