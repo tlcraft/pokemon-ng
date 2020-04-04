@@ -4,6 +4,6 @@
         Search for a Pokemon (enter their name)
     </label>
     <input formControlName="pokemonName" id="pokemon-name" name="pokemon-name" type="text">
-    <button (click)="getPokemonData()" [disabled]="form.invalid">Search</button>
+    <button (click)="getPokemonData()" [disabled]="form.invalid"><div class="circle">Search</div></button>
 </form>
 <img *ngIf="pokemonSource()" src="{{pokemonSource()}}" alt="A picture of a pokemon {{getLowerCasePokemonName()}}." class="sprite"/>
